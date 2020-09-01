@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Random;
 
 public class GameConfig {
 	public static final int WIDTH = 240;
@@ -16,7 +17,7 @@ public class GameConfig {
 	public static boolean saveExists = false;
 	public static boolean saveGame = false;
 	public static int CUR_LEVEL = 0;
-
+	public static Random random = new Random();
 	public GameConfig() {
 		isSaved();
 	}
@@ -111,7 +112,7 @@ public class GameConfig {
 			case "level":
 				CUR_LEVEL = Integer.parseInt(spl2[1]);
 				System.out.println("Level:"+CUR_LEVEL);
-			}
+				}
 		}
 	}
 }
