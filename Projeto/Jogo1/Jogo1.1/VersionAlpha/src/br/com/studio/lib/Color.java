@@ -1,10 +1,13 @@
 package br.com.studio.lib;
 
 public class Color {
+	
+	// << representa uma movimentação de valores ao nivel binario isso para gerar o RGBA mais exato
 	public static int get(int a, int b, int c, int d) {
 		return (get(d) << 24) + (get(c) << 16) + (get(b) << 8) + (get(a));
 	}
 
+	// passando apenas D é possivel calcular o valor do RGBA desejado;
 	public static int get(int d) {
 		if (d < 0)
 			return 255;

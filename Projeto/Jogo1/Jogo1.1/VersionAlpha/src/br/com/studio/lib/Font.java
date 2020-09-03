@@ -1,11 +1,14 @@
 package br.com.studio.lib;
 
 public class Font {
+
+	// saval todos os chars possivels em uma variavel para evitar erros
 	private static String chars = "" + //
 			"ABCDEFGHIJKLMNOPQRSTUVWXYZ      " + //
 			"0123456789.,!?'\"-+=/\\%()<>:;     " + //
 			"";
 
+	//Desenha a mensagem em caixa alta na tela atual
 	public static void draw(String msg, Screen screen, int x, int y, int col) {
 		msg = msg.toUpperCase();
 		for (int i = 0; i < msg.length(); i++) {
@@ -16,6 +19,7 @@ public class Font {
 		}
 	}
 
+	//Renderiza o testo frame a frame
 	public static void renderFrame(Screen screen, String title, int x0, int y0, int x1, int y1) {
 		for (int y = y0; y <= y1; y++) {
 			for (int x = x0; x <= x1; x++) {

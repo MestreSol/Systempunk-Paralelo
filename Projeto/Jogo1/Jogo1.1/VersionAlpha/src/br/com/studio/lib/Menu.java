@@ -1,11 +1,8 @@
-package br.com.studio.main;
+package br.com.studio.lib;
 
 import java.util.List;
 
-import br.com.studio.lib.Color;
-import br.com.studio.lib.Font;
-import br.com.studio.lib.Inputs;
-import br.com.studio.lib.Screen;
+import br.com.studio.main.Game;
 import br.com.studio.screen.ListItem;
 
 public class Menu {
@@ -37,12 +34,14 @@ public class Menu {
 		if (i1 > h)
 			i1 = h;
 		int io = selected - h / 2;
-		if(io > listItems.size() - h) io = listItems.size() - h;
-		if(io < 0) io = 0;
-		for(int i = i0; i<i1;i++) {
-			listItems.get(i +io).renderInventory(screen, (1+xo)*8,(i+1+yo)*8);
+		if (io > listItems.size() - h)
+			io = listItems.size() - h;
+		if (io < 0)
+			io = 0;
+		for (int i = i0; i < i1; i++) {
+			listItems.get(i + io).renderInventory(screen, (1 + xo) * 8, (i + 1 + yo) * 8);
 		}
-		if(renderCursos) {
+		if (renderCursos) {
 			int yy = selected + 1 - io + yo;
 			Font.draw(">", screen, (xo + 0) * 8, yy * 8, Color.get(5, 555, 555, 555));
 			Font.draw("<", screen, (xo + w) * 8, yy * 8, Color.get(5, 555, 555, 555));
