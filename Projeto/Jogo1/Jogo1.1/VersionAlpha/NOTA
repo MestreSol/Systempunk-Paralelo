@@ -1,3 +1,0 @@
-Estou usando o JOptionPane por que quando o jogo é executado de forma externa ao eclipse e acontece um erro, o mesmo nao é exibido, apenas no console do cmd isso se vc executar ele por lá.
-
-Todas as clases possuem o metodo tick e render
