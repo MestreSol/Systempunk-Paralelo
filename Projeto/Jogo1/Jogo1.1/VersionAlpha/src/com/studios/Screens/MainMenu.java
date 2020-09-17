@@ -56,7 +56,7 @@ public class MainMenu extends Menu {
 				msg = "> " + msg + " <";
 				col = Color.get(0, 555, 555, 555);
 			}
-			Font.draw(msg, Game.screen, (Game.screen.w - msg.length() * 8) / 2, (8 + i) * 8, col);
+			g.drawString(msg,(Game.screen.w - msg.length() * 8) / 2, (8 + i) * 8);
 		}
 		Font.draw("(Arrow keys,X and C)", Game.screen, 0, Game.screen.h - 8, Color.get(0, 111, 111, 111));
 	}

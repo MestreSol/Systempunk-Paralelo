@@ -10,11 +10,13 @@ import java.util.List;
 
 import com.studios.main.Game;
 
-public class Inputs implements KeyListener, MouseListener, MouseMotionListener {
+public class Inputs implements KeyListener, MouseListener, MouseMotionListener{
+
 
 	public class Key {
 		public int presses, absorbs;
 		public boolean down, clicked;
+
 		public Key() {
 			keys.add(this);
 		}
@@ -39,6 +41,7 @@ public class Inputs implements KeyListener, MouseListener, MouseMotionListener {
 	}
 
 	public List<Key> keys = new ArrayList<Key>();
+
 	public Key up = new Key();
 	public Key down = new Key();
 	public Key left = new Key();
